@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.efeito {
+    width: 150px;
+    height: 150px;
+    border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+    box-shadow: inset 10px 10px 10px rgb(0 0 0 / 5%),15px 25px 10px rgb(0 0 0 / 10%),inset -10px -10px 15px rgb(255 255 255 / 90%), 15px 20px 20px rgb(0 0 0 / 5%);
+    background: transparent;
+    position: absolute;
+}
+.efeito::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    top: 25px;
+    left: 35px;
+    border-radius: 78% 22% 27% 73% / 71% 34% 66% 29%;
+}
+.efeito::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    top: 15px;
+    left: 65px;
+    border-radius: 78% 22% 27% 73% / 71% 34% 66% 29%;
+}
+.efeito:nth-child(2) {
+    transform: scale(0.5) translate(-200px, 180px) ;
+}
+.efeito:nth-child(3) {
+    transform: scale(0.6) translate(280px, 10px) ;
+}
+.efeito:nth-child(4) {
+    transform: scale(0.35) translate(120px, -350px);
+    border-radius: 51% 49% 67% 33% / 35% 50% 50% 65% ;
+}
+.drops{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+body {
+    background: #edeeed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo{
+    background: url('logo-github.svg');
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(4px 6px 9px black);
+    align-content: center;
+}
+.title {
+    font-size: 31px;
+    font-family: cursive, sans-serif;
+    text-shadow: 1px 2px 3px darkcyan;
+    color: #167D7F;
+    font-weight: 700;
+}
+.cardSearchPrincipal{
+    width: 350px;
+    height: 55vh;
+    display: block;
+}
+.form-control{
+    width: 200px;
+    margin: 2vh 0;
+    height: 6vh;
+    border-radius: 3vh;
+    border: none;
+    outline: none;
+    padding: 0 2vh;
+    color: #29A0B1;
+}
+.form-control:focus {
+    border: 2px solid #98D7C2;
+}
+
+.pesquisar {
+    margin: 2vh 0;
+    width: 200px;
+    height: 6vh;
+    border-radius: 3vh;
+    border: none;
+    cursor: pointer;
+    background: url('logo-github.svg'),#DDFFE7;
+    color: #167D7F;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 35px;
+    filter: drop-shadow(0px 0px 10px black);
+}
+#profile{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cardContainerGrid{
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 35% 50%;
+    grid-template-rows: 90vh;
+    align-items: center;
+}
+.imagePerfil{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #29A0B1;
+    margin: 4vh 0;
+}
+.cardContainer{
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.btnPerfil{
+    display: flex;
+    text-decoration: none;
+    color: #29A0B1;
+    height: 5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.voltar {
+    position: absolute;
+    top: 7rem;
+    right: 13rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.voltar:hover{
+    background-color: #DDFFE7;
+    color: #167D7F;
+}
+
+.iconeVoltar{
+    height: 30px;
+    width: 30px;
+}
+.verPerfil{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    height: 5vh;
+    justify-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: #DDFFE7;
+}
+.verPerfil:hover{
+    background: #29A0B1;
+}
+.btnPerfil:hover {
+    color: #DDFFE7;
+}
+.lista{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+.itemLista{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background: #1f1f1f;
+    margin: 0 2vh;
+    justify-content: center;
+    color: white;
+    border-radius: 3vh;
+    box-shadow: 10px 10px 20px #000;
+    filter: drop-shadow(2px 2px 35px black);
+}
